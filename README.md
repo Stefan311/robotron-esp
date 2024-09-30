@@ -122,40 +122,40 @@ Das Verbindungskabel zur Hauptplatzine wird 1:1 beschaltet.
 
 # Hinweise zum Flashen der Firmware
 
-1. hier die "Flash Download Tools" herunterladen und auspacken: https://www.espressif.com/en/support/download/other-tools
+1. hier die "Flash Download Tools" herunterladen und auspacken: [](https://www.espressif.com/en/support/download/other-tools/)
 
 2. Ein Firmware-Image herunterladen:
-https://imoriath.com/downloads/privat/vga/robotron-esp32-vga-firmware-V1.0.bin nur VGA
-oder
-https://imoriath.com/downloads/privat/vga/robotron-esp32-wifi-firmware-V1.0.bin nur WLAN
-oder
-https://imoriath.com/downloads/privat/vga/robotron-esp32-vga-wifi-firmware-V1.0.bin VGA und WLAN
+- [Version 1.0 nur VGA](/robotron-esp/binaries/robotron-esp32-vga-firmware-V1.0.bin)
+- [Version 1.0 nur WLAN](/robotron-esp/binaries/robotron-esp32-wifi-firmware-V1.0.bin)
+- [Version 1.0 VGA und WLAN](/robotron-esp/binaries/robotron-esp32-vga-wifi-firmware-V1.0.bin)
 
-3. Den Robotron-Adapter am USB anstöpseln. Den BOOT Jumper vor dem Flashen NICHT stecken!
+Alle Firmware-Versionen finden Sie weiter unten.  
+
+3. Den Robotron-Adapter am USB anstöpseln. *Den BOOT Jumper vor dem Flashen NICHT stecken!*
 
 Beim ersten Mal wird Windows ein neues Gerät finden
-
+![](/robotron-esp/images/windows_find.png)
 
 4. Gegebenenfalls im Gerätemanager überprüfen welcher COM-Port das ist.
-
+[![](/robotron-esp/images/windows_devmanager_prev.png)](/robotron-esp/images/windows_devmanager.png)
 
 5. Das Flash-Programm starten.
-
+![](/robotron-esp/images/flash1.png)
 
 6. "ESP32S3" und "USB" auswählen
-
+![](/robotron-esp/images/flash2.png)
 
 7. "OK" klicken
-
+![](/robotron-esp/images/flash3.png)
 
 8. Erste Zeile anhaken, Firmware-Image anwählen, Startadresse "0" eintragen, COM-Port auswählen.
-
+![](/robotron-esp/images/flash4.png)
 
 9. "Start" klicken, warten
-
+![](/robotron-esp/images/flash5.png)
 
 10. Flash fertig
-
+![](/robotron-esp/images/flash6.png)
 
 11. Den Robotron-Adapter vom USB abziehen, den BOOT-Jumper stecken (=Schreibschutz). Danach ist der Robotron-Adapter betriebsbereit.
 
