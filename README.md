@@ -129,34 +129,48 @@ Das Verbindungskabel zur Hauptplatzine wird 1:1 beschaltet.
 - [Version 1.0 nur WLAN](/robotron-esp/binaries/robotron-esp32-wifi-firmware-V1.0.bin)
 - [Version 1.0 VGA und WLAN](/robotron-esp/binaries/robotron-esp32-vga-wifi-firmware-V1.0.bin)
 
-Alle Firmware-Versionen finden Sie weiter unten.  
+      Alle Firmware-Versionen finden Sie weiter unten.  
 
-3. Den Robotron-Adapter am USB anstöpseln. *Den BOOT Jumper vor dem Flashen NICHT stecken!*
+3. Den Robotron-Adapter am USB anstöpseln. **Den BOOT Jumper vor dem Flashen NICHT stecken!**
 
 Beim ersten Mal wird Windows ein neues Gerät finden
+
 ![](/robotron-esp/images/windows_find.png)
 
 4. Gegebenenfalls im Gerätemanager überprüfen welcher COM-Port das ist.
+
 [![](/robotron-esp/images/windows_devmanager_prev.png)](/robotron-esp/images/windows_devmanager.png)
 
 5. Das Flash-Programm starten.
+
 ![](/robotron-esp/images/flash1.png)
 
 6. "ESP32S3" und "USB" auswählen
+
 ![](/robotron-esp/images/flash2.png)
 
 7. "OK" klicken
+
 ![](/robotron-esp/images/flash3.png)
 
 8. Erste Zeile anhaken, Firmware-Image anwählen, Startadresse "0" eintragen, COM-Port auswählen.
+
 ![](/robotron-esp/images/flash4.png)
 
 9. "Start" klicken, warten
+
 ![](/robotron-esp/images/flash5.png)
 
 10. Flash fertig
+
 ![](/robotron-esp/images/flash6.png)
 
 11. Den Robotron-Adapter vom USB abziehen, den BOOT-Jumper stecken (=Schreibschutz). Danach ist der Robotron-Adapter betriebsbereit.
 
 # Firmware-Versionen
+
+[Version 1.0 nur VGA](/robotron-esp/binaries/robotron-esp32-vga-firmware-V1.0.bin)
+
+[Version 1.0 nur WLAN](/robotron-esp/binaries/robotron-esp32-wifi-firmware-V1.0.bin)
+
+[Version 1.0 VGA und WLAN](/robotron-esp/binaries/robotron-esp32-vga-wifi-firmware-V1.0.bin)
