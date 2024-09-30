@@ -66,7 +66,7 @@ Der sollte im normalen Betrieb gesteckt sein. Ohne den, bleibt er im Bootlader u
 Das Keypad ist nur für die initiale Konfiguration zwingend nötig, wird dann (außer evtl. beim PC1715) normal nicht weiter benötigt.
 Beim PC1715 könnte man es zum nachjustieren des Videosignals nutzen wollen.
 
-![](images/platine_top.png)  ![](images/platine_bottom.png)
+![](./images/platine_top.png)  ![](./images/platine_bottom.png)
 
 ## Aufbau
 Ich empfehle, zuerst den ESP32S3 aufzulöten.
