@@ -66,9 +66,7 @@ Der sollte im normalen Betrieb gesteckt sein. Ohne den, bleibt er im Bootlader u
 Das Keypad ist nur für die initiale Konfiguration zwingend nötig, wird dann (außer evtl. beim PC1715) normal nicht weiter benötigt.
 Beim PC1715 könnte man es zum nachjustieren des Videosignals nutzen wollen.
 
-![](./images/platine_top_prev.png) [Groß](./images/platine_top.png) 
-
-[![](./images/platine_bottom_prev.png)](./images/platine_bottom.png)
+[![](images/platine_top_prev.png)](images/platine_top.png)  [![](images/platine_bottom_prev.png)](images/platine_bottom.png)
 
 ## Aufbau
 Ich empfehle, zuerst den ESP32S3 aufzulöten.
@@ -114,6 +112,8 @@ Wenn die gelötet sind, bleibt noch der USB Port. Dazu die Hinweise von oben bea
 Der Rest mit Durchkontaktierung ist dann sicher unproblematisch.
 
 Beim Keypad gilt das gleich, für die SMD Taster/LEDs.
+
+[![](images/keypad_top_prev.png)](images/keypad_top.png)  [![](images/keypad_bottom_prev.png)](images/keypad_bottom.png)
 
 Die Kathode der LEDs zeigt jeweils nach links.
 An den Tastern jeweils einen Signalpin Pad verzinnen und den Taster anlöten. Dann Diagonal einen 2. Pad verlöten.
