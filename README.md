@@ -66,7 +66,7 @@ Der sollte im normalen Betrieb gesteckt sein. Ohne den, bleibt er im Bootlader u
 Das Keypad ist nur für die initiale Konfiguration zwingend nötig, wird dann (außer evtl. beim PC1715) normal nicht weiter benötigt.
 Beim PC1715 könnte man es zum nachjustieren des Videosignals nutzen wollen.
 
-[![](images/platine_top_prev.png)](images/platine_top.png)  [![](images/platine_bottom_prev.png)](images/platine_bottom.png)
+[![](/robotron-esp/images/platine_top_prev.png)](/robotron-esp/images/platine_top.png)  [![](/robotron-esp/images/platine_bottom_prev.png)](/robotron-esp/images/platine_bottom.png)
 
 ## Aufbau
 Ich empfehle, zuerst den ESP32S3 aufzulöten.
@@ -113,7 +113,7 @@ Der Rest mit Durchkontaktierung ist dann sicher unproblematisch.
 
 Beim Keypad gilt das gleich, für die SMD Taster/LEDs.
 
-[![](images/keypad_top_prev.png)](images/keypad_top.png)  [![](images/keypad_bottom_prev.png)](images/keypad_bottom.png)
+[![](/robotron-esp/images/keypad_top_prev.png)](/robotron-esp/images/keypad_top.png)  [![](/robotron-esp/images/keypad_bottom_prev.png)](/robotron-esp/images/keypad_bottom.png)
 
 Die Kathode der LEDs zeigt jeweils nach links.
 An den Tastern jeweils einen Signalpin Pad verzinnen und den Taster anlöten. Dann Diagonal einen 2. Pad verlöten.
@@ -121,5 +121,42 @@ An den Tastern jeweils einen Signalpin Pad verzinnen und den Taster anlöten. Da
 Das Verbindungskabel zur Hauptplatzine wird 1:1 beschaltet.
 
 # Hinweise zum Flashen der Firmware
+
+1. hier die "Flash Download Tools" herunterladen und auspacken: https://www.espressif.com/en/support/download/other-tools
+
+2. Ein Firmware-Image herunterladen:
+https://imoriath.com/downloads/privat/vga/robotron-esp32-vga-firmware-V1.0.bin nur VGA
+oder
+https://imoriath.com/downloads/privat/vga/robotron-esp32-wifi-firmware-V1.0.bin nur WLAN
+oder
+https://imoriath.com/downloads/privat/vga/robotron-esp32-vga-wifi-firmware-V1.0.bin VGA und WLAN
+
+3. Den Robotron-Adapter am USB anstöpseln. Den BOOT Jumper vor dem Flashen NICHT stecken!
+
+Beim ersten Mal wird Windows ein neues Gerät finden
+
+
+4. Gegebenenfalls im Gerätemanager überprüfen welcher COM-Port das ist.
+
+
+5. Das Flash-Programm starten.
+
+
+6. "ESP32S3" und "USB" auswählen
+
+
+7. "OK" klicken
+
+
+8. Erste Zeile anhaken, Firmware-Image anwählen, Startadresse "0" eintragen, COM-Port auswählen.
+
+
+9. "Start" klicken, warten
+
+
+10. Flash fertig
+
+
+11. Den Robotron-Adapter vom USB abziehen, den BOOT-Jumper stecken (=Schreibschutz). Danach ist der Robotron-Adapter betriebsbereit.
 
 # Firmware-Versionen
