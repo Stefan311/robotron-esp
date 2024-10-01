@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Robotron-ESP-Adapter</title>
+</head>
+<body>
+<h1>Einleitung</h1>
+Robotron-ESP ist eine Platine, mit der man das Video-Ausgangssignal von verschiedenen Robotron-Computern auf neueren Monitoren darstellen kann.<br>
+Zur Zeit wird die Ausgabe des Video-Signals über <b>VGA</b> und <b>WLAN</b>(HTTP-Streaming) unterstützt.<br>
+Das funktioniert aktuell für die Computer <b>A7100</b>, <b>EC1834</b>(mit MON-Grafikkarte), und <b>PC1715</b>.<br>
+((TODO: hier ein paar hübsche Bilder einfügen))
+<br>
+<h1>Historie</h1>
+Der Adapter wurde ursprünglich für den A7100 entwickelt, siehe <a href="https://www.robotrontechnik.de/html/forum/thwb/showtopic.php?threadid=21380">Robotrontechnik-Forum</a>.<br>
+Die Firmware stammt von <i>Stefan Berndt (alias Ordoban)</i>, die Umsetzung auf Platine stammt von <i>Mario  Goegel (alias MarioG77)</i>.<br>
+Die Weiterentwicklung das Adapters kann auf Github verfolgt werden: <a href="https://github.com/mgoegel/robotron-esp-vga.pcb">Leiterplatte</a>, <a href="https://github.com/mgoegel/robotron-esp-vga">VGA-Firmware</a> und <a href="https://github.com/Stefan311/robotron-esp-wifi">WLAN-Firmware</a>.<br>
+<br>
+<h1>Beschaffung</h1>
+Mario hat einige Platienen fertigen lassen, und bietet auch die Bauteile als Set an. Einfach mal im <a href="https://www.robotrontechnik.de/html/forum/thwb/showtopic.php?threadid=22326">Flohmarkt-Tread</a> im Robotrontechnik-Forum fragen.<br>
+Alternativ dazu kann sich jeder den Schaltplan und Layout (KiCad) von <a href="https://github.com/mgoegel/robotron-esp-vga.pcb">Github</a> herunterladen, und sich selbst Platinen fertigen lassen.<br>
+Die Bauteile könnt ihr dann zum Beispiel bei Reichelt kaufen. Hier die <a href="https://www.reichelt.de/my/2181752">Materialliste</a>. Auf Github sind auch die interaktiven Bestückungslisten für <a href="https://html-preview.github.io/?url=https://github.com/mgoegel/robotron-esp-vga.pcb/blob/master/pc1715-esp32vga/bom/ibom.html">Hauptplatine</a> und <a href=https://html-preview.github.io/?url=https://github.com/mgoegel/robotron-esp-vga.pcb/blob/master/esp32vga-keypad/bom/ibom.html>Keypad</a> verfügbar.<br>
+<br>
+<h1>Aufbauhinweise</h1>
+Der Aufbau in SMD-Technik ist für ungeübte Finger schon eine Herausforderung.<br>
+Eine <a href="aufbau.html">Anleitung mit vielen guten Tips von Mario</a> kann helfen.<br>
+<br>
+<h1>Was zu erwarten ist</h1>
+Das Bild vom A7100 und EC1834MON sollte absolut klar und sauber sein.<br>
+Beim PC1715 haben wir hier leider kleine Qualitätseinbusen (zeitweise flackernde Pixel, insbesondere beim einschalten), die Bauartbedingt von der Hauptplatine kommen - vielleicht lässt sich da in Zukunft noch was verbessern.
+Hardwareseitig wird sich wohl nicht viel machen lassen.<br>
+<br>
+<h1>Hinweise zum Flashen der Firmware</h1>
+Die Firmware kann mit dem USB-Anschluss auf den Adapter übertragen werden. Wenn ihr nur die vorgefertigte Firmware nutzen wollt, dann empfehle ich die Benutzung der <a href="https://www.espressif.com/en/support/download/other-tools/">Flash Download Tools</a> von Espressif.<br>
+Wer diese Methode nutzen möchte, sollte die <a href="flash.html">detailierte Anleitung</a> von Stefan lesen.<br>
+<br>
+Wenn ihr jedoch selbst Änderungen an der Firmware vornehmen wollt, dann könnt ihr auch die Quelltexte von Github herunterladen, über die regulären Espressif Entwicklungsumgebungen (VS Code, Eclipse, ...) bearbeiten, compilieren, und auf den Adapter übertragen.<br>
+<h1>Firmware Binär Images</h1>
+Die "lääätest änd grääätest" Firmware-Versionen sind die hier:<br>
+<a href="https://stefan311.github.io/robotron-esp/binaries/robotron-esp32-vga-firmware-V1.0.bin">Version 1.0 nur VGA</a><br>
+<a href="https://stefan311.github.io/robotron-esp/binaries/robotron-esp32-wifi-firmware-V1.0.bin">Version 1.0 nur WLAN</a><br>
+<a href="https://stefan311.github.io/robotron-esp/binaries/robotron-esp32-vga-wifi-firmware-V1.0.bin">Version 1.0 VGA und WLAN</a><br><br>
+Wir haben natürlich auch eine Liste mit <a href="binaries.html">allen Firmware-Versionen</a>.<br>
+<br>
+<h1>Gallerie</h1>
+Und so könnte <a href="gallierie.html">der Adapter fertig</a> aussehen.
+</body></html>

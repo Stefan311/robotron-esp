@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de-DE"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Robotron-ESP-Adapter - Hinweise zum Flashen der Firmware</title>
+</head>
+<body>
+<h1>Hinweise zum Flashen der Firmware</h1>
+1. Die <a href="https://www.espressif.com/en/support/download/other-tools/">"Flash Download Tools"</a> von Espressif herunterladen und auspacken.<br>
+<br>
+2. Ein <a href="binaries.html">Firmware-Image</a> herunterladen.<br>
+<br>
+3. Den Robotron-ESP-Adapter am USB anstöpseln. Den BOOT Jumper vor dem Flashen <b>NICHT</b> stecken!<br>
+Beim ersten Mal wird Windows ein neues Gerät finden<br>
+<img src="images/windows_find.png"><br><br>
+4. Gegebenenfalls im Gerätemanager überprüfen welcher COM-Port das ist.<br>
+<a href="images/windows_devmanager.png"><img src="images/windows_devmanager_prev.png"></a><br><br>
+5. Das Flash-Programm starten.<br>
+<img src="images/flash1.png" alt=""><br><br>
+6. "ESP32S3" und "USB" auswählen<br>
+<img src="images/flash2.png"><br><br>
+7. "OK" klicken<br>
+<img src="images/flash3.png"><br><br>
+8. Erste Zeile anhaken, Firmware-Image anwählen, Startadresse "0" eintragen, COM-Port auswählen.<br>
+<img src="images/flash4.png"><br><br>
+9. "Start" klicken, warten<br>
+<img src="images/flash5.png"><br><br>
+10. Flash fertig<br>
+<img src="images/flash6.png"><br><br>
+11. Den Robotron-ESP-Adapter vom USB abziehen, den BOOT-Jumper stecken (=Schreibschutz). Danach ist der Adapter betriebsbereit.<br>
+<br>
+<a href="index.html">Zurück zur Hauptseite</a><br>
+</body></html>
