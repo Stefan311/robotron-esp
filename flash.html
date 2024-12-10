@@ -3,7 +3,7 @@
 <title>Robotron-ESP-Adapter - Hinweise zum Flashen der Firmware</title>
 </head>
 <body>
-<h1>Hinweise zum Flashen der Firmware</h1>
+<h1>Hinweise zum Flashen der Firmware unter Windows</h1>
 1. Die <a href="https://www.espressif.com/en/support/download/other-tools/">"Flash Download Tools"</a> von Espressif herunterladen und auspacken.<br>
 <br>
 2. Ein <a href="binaries.html">Firmware-Image</a> herunterladen.<br>
@@ -13,6 +13,7 @@ Beim ersten Mal wird Windows ein neues Gerät finden<br>
 <img src="images/windows_find.png"><br><br>
 4. Gegebenenfalls im Gerätemanager überprüfen welcher COM-Port das ist.<br>
 <a href="images/windows_devmanager.png"><img src="images/windows_devmanager_prev.png"></a><br><br>
+Bei eingen Windows-Installationen wird zwar der Robotron-ESP-Adapter als Gerät erkannt, es kann aber kein passender Treiber gefunden werden. Es ist keine allgemein gültige Maßnahme zur Behebung dieses Problems bekannt. Im Internet sind mehrere Beiträge zu diesem hema zu finden, von denen aber keiner eine befriedigende Lösung bietet. Wer kann, sollte einfach einen anderen Rechner probieren.<br>
 5. Das Flash-Programm starten.<br>
 <img src="images/flash1.png" alt=""><br><br>
 6. "ESP32S3" und "USB" auswählen<br>
@@ -27,5 +28,23 @@ Beim ersten Mal wird Windows ein neues Gerät finden<br>
 <img src="images/flash6.png"><br><br>
 11. Den Robotron-ESP-Adapter vom USB abziehen, den BOOT-Jumper stecken (=Schreibschutz). Danach ist der Adapter betriebsbereit.<br>
 <br>
-<a href="index.html">Zurück zur Hauptseite</a><br>
+<h1>Hinweise zum Flashen der Firmware unter Linux</h1>
+(Danke an DL für diesen Hinweis)<br>
+1. Das Flash-Tool installieren, wie hier beschrieben: <a href="https://docs.espressif.com/projects/esptool/en/latest/esp32/">Esptool.py Documentation</a><br>
+2. Den Robotron-ESP-Adapter am USB anstöpseln. Den BOOT Jumper vor dem Flashen <b>NICHT</b> stecken!<br>
+3. mit <b>dmesg</b> die Systemmeldungen anzeigen lassen. Da sollte sich ein USB-Gerät gemeldet haben:<br>
+<i>
+[13842.057311] usb 3-4.4: new full-speed USB device number 5 using ehci-pci<br>
+[13842.150064] usb 3-4.4: New USB device found, idVendor=303a, idProduct=1001, bcdDevice= 1.01<br>
+[13842.150076] usb 3-4.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3<br>
+[13842.150081] usb 3-4.4: Product: USB JTAG/serial debug unit<br>
+[13842.150085] usb 3-4.4: Manufacturer: Espressif<br>
+[13842.150089] usb 3-4.4: SerialNumber: F4:12:FA:CC:9B:AC<br>
+[13842.221088] cdc_acm 3-4.4:1.0: ttyACM0: USB ACM device<br>
+[13842.221135] usbcore: registered new interface driver cdc_acm<br>
+[13842.221138] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters<br>
+</i>
+4. Flashen mit dieser Befehlszeile: <i>esptool.py -p /dev/ttyACM0 write_flash 0 robotron-esp32-vga-firmware-V1.3.bin</i><br>
+5. Den Robotron-ESP-Adapter vom USB abziehen, den BOOT-Jumper stecken (=Schreibschutz). Danach ist der Adapter betriebsbereit.<br>
+<br><a href="index.html">Zurück zur Hauptseite</a><br>
 </body></html>
